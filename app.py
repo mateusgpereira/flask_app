@@ -1,4 +1,3 @@
-import os
 from flask import Flask
 from flask_restful import Api
 from flask_jwt import JWT
@@ -32,5 +31,4 @@ api.add_resource(UserRegister, '/signup')
 
 if __name__ == "__main__":
     db.init_app(app)
-    port = int(os.environ.get('PORT', 5000))
-    app.run(port=port, debug=True)
+    app.run(port=5000, debug=True)
